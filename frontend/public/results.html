@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>SP Air</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css">
+    <!-- Bootstrap Select CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-dark bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index">SP Air</a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary shadow-none" data-bs-toggle="modal"
+                data-bs-target="#modalLogin">
+                Log In
+            </button>
+            <div class="d-none" id="userButtons">
+                <a href="/user" class="btn btn-primary shadow-none" role="button">My Account</a>
+                <button type="button" class="btn btn-danger shadow-none logoutButton">
+                    Logout
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade py-5" tabindex="-1" role="dialog" id="modalLogin" aria-labelledby="modalLoginLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content rounded-5 shadow">
+                        <div class="modal-header p-5 pb-4 border-bottom-0">
+                            <h2 class="fw-bold mb-0">Welcome Back</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-5 pt-0">
+                            <form id="loginForm">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-4" id="loginEmail"
+                                        placeholder="name@example.com">
+                                    <label for="loginEmail">Email address</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control rounded-4" id="loginPassword"
+                                        placeholder="Password">
+                                    <label for="loginPassword">Password</label>
+                                </div>
+                                <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Log
+                                    In</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Content-->
+    <div class="max-width container d-flex align-items-center p-0 m-0">
+        <div class="progress-bar row w-100 m-0 justify-content-center" id="resultsProgressBar">
+            <div class="progress-bar__wrapper col-xl-9">
+                <ul class="progress-bar__inner row w-100">
+                    <li class="col progress-bar-item_info active"><span class="number"><em>1</em></span> <span
+                            class="text">FLIGHTS</span> <span class="arrow"></span></li>
+                    <li class="col progress-bar-item_info"><span class="number"><em>2</em></span> <span
+                            class="text">PASSENGER</span> <span class="arrow"></span></li>
+                    <li class="col progress-bar-item_info"><span class="number"><em>3</em></span> <span
+                            class="text">PAYMENT</span> <span class="arrow"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="flight-details-wrap max-width container d-flex justify-content-center sticky-top p-0 m-0">
+        <div class="col-md-11 col-xl-9 px-2">
+            <div class="flight-details row">
+                <div class="col">
+                    <span class="flight-details-header">Departing</span>
+                    <div class="row d-none d-md-flex">
+                        <div class="col-5 placeholder-glow" id="detailsDepartOrigin">
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                        </div>
+                        <div class="col-1 px-0">
+                            <div class="airplane"></div>
+                        </div>
+                        <div class="col-5 offset-1 ps-0 placeholder-glow" id="detailsDepartDestination">
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                        </div>
+                    </div>
+                    <div class="row d-flex d-md-none placeholder-glow">
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </div>
+                </div>
+                <div class="vr p-0 mx-3"></div>
+                <div class="col">
+                    <span class="flight-details-header">Arriving</span>
+                    <div class="row d-none d-md-flex">
+                        <div class="col-5 placeholder-glow" id="detailsArriveOrigin">
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                        </div>
+                        <div class="col-1 px-0">
+                            <div class="airplane"></div>
+                        </div>
+                        <div class="col-5 offset-1 ps-0 placeholder-glow" id="detailsArriveDestination">
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                        </div>
+                    </div>
+                    <div class="row d-flex d-md-none placeholder-glow">
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="edit-search-bsp-toggle-edit-search-wrap">
+        <span class="edit-search__img-wrap">
+            <img src="assets/img/left-wing.png">
+        </span>
+        <div class="edit-search-bsp-toggle-1">
+            <button type="button" class="btn edit-search__button shadow-none" data-bs-toggle="modal"
+                data-bs-target="#modalEditSearch">Edit search</button>
+        </div>
+        <span class="edit-search__img-wrap">
+            <img src="assets/img/right-wing.png">
+        </span>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade py-5" tabindex="-1" role="dialog" id="modalEditSearch" aria-labelledby="modalEditSearchLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header border-bottom-0 px-4 pt-4">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4 pt-0">
+                    <form class="needs-validation" id="flightSearchForm" novalidate action="/results" method="get">
+                        <div class="row justify-content-between">
+                            <div class="col-12 col-md-auto mb-2">
+                                <div class="form-group p-0">
+                                    <input type="radio" name="type" id="formOneway" value="oneway" checked>
+                                    <label for="formOneway" class="me-3">One Way</label>
+                                    <input type="radio" name="type" id="formReturn" value="return">
+                                    <label for="formReturn">Return</label>
+                                </div>
+                            </div>
+                            <div class="col-auto mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="True" id="formDirectOnly"
+                                        name="directOnly">
+                                    <label class="form-check-label" for="formDirectOnly">
+                                        Direct flights only
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-md-3">
+                            <div class="form-group col-12 col-md-6 mb-2 mb-md-0">
+                                <label for="formFrom">From</label>
+                                <select class="airportPicker form-control" data-live-search="true" id="formFrom"
+                                    title="Originating Airport" name="from" required>
+                                </select>
+
+                            </div>
+                            <div class="form-group col-12 col-md-6 mb-2 mb-md-0">
+                                <label for="formTo">To</label>
+                                <select class="airportPicker form-control" data-live-search="true" id="formTo"
+                                    title="Destination Airport" name="to" required>
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="form-group col-12 col-md-6 mb-2 mb-md-0">
+                                <label for="formDeparture">Departure</label>
+                                <input type="date" class="form-control" id="formDeparture" aria-describedby="emailHelp"
+                                    placeholder="Departure Date" name="fromDate" required>
+                                <!-- <div class="invalid-feedback">
+                                            This field is required.
+                                        </div> -->
+                            </div>
+                            <div class="form-group col-12 col-md-6">
+                                <label for="formArrival">Arrival</label>
+                                <input type="date" class="form-control" id="formArrival" placeholder="Arrival Date"
+                                    name="toDate" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="col-12 btn btn-primary">Search Flights</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container align-items-center justify-content-center">
+        <div class="row justify-content-center" id="departRow">
+            <div class="col-xl-8 mt-5 mb-4">
+                <div class="text-center text-black">
+                    <!-- Page heading-->
+                    <h1 class="my-4 d-none" id="departHeader">Flight from Singapore to Tokyo</h1>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="accordion" id="departAccordion">
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center" id="arriveRow">
+            <div class="col-xl-8 mt-5 mb-4">
+                <div class="text-center text-black">
+                    <!-- Page heading -->
+                    <h1 class="my-4 d-none" id="arriveHeader">Flight from Tokyo to Singapore</h1>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="accordion" id="arriveAccordion">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JQuery DirtyForms Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/jquery.dirtyforms/2.0.0/jquery.dirtyforms.min.js"></script>
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <!-- Axios JS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap Select JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <!-- Core JS-->
+    <script src="js/main.js"></script>
+    <!-- Page JS-->
+    <script src="js/results.js"></script>
+
+</body>
+
+</html>

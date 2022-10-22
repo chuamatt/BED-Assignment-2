@@ -1,0 +1,586 @@
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+div.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../assets/img/b1.75_keyvisual2.webp") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 56px);
+  /* 56px is the height of the navbar, also minus footer */
+}
+
+div.masthead:before {
+  content: "";
+  position: absolute;
+  background-color: #1c375e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 60%;
+}
+
+div.masthead h1, div.masthead .h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+
+  /* header.masthead {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    } */
+  div.masthead h1, div.masthead .h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action:before {
+  content: "";
+  position: absolute;
+  background-color: #1c375e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.modal-backdrop {
+  opacity: 60% !important;
+  /* Default is 50% */
+}
+
+.accordion-item, .accordion-item:not(:first-of-type) {
+  border-radius: calc(.25rem - 1px) !important;
+  /* This is the default, just adding to bottom too */
+  margin: 20px 0px;
+  border: 2px solid rgba(0, 0, 0, .25);
+}
+
+.accordion-button>.row, .accordion-body>.row {
+  --bs-gutter-x: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #212529;
+}
+
+.flight-time {
+  font-size: 1.5rem;
+  color: rgb(0, 38, 107);
+}
+
+.flight-date {
+  font-size: 0.8rem;
+  color: rgb(102, 102, 102);
+}
+
+.transfer {
+  text-align: center;
+  position: relative;
+  margin: 0px 20px
+}
+
+.transfer:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 0.5px solid rgb(71, 71, 71);
+  background: rgb(71, 71, 71);
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.transfer .circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgb(71, 71, 71);
+  margin: 0.4rem auto;
+}
+
+.flight-transfer {
+  font-size: 1rem;
+  color: black;
+}
+
+.price-from {
+  font-size: 0.8rem;
+  color: rgb(0, 38, 107);
+}
+
+.price-value {
+  font-size: 1.4rem;
+  color: rgb(0, 38, 107);
+}
+
+.accordion-button::after {
+  content: none
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+
+.down-arrow {
+  flex-shrink: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0.3rem auto 0 auto;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300266b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
+  transition: transform .2s ease-in-out;
+}
+
+.accordion-button:not(.collapsed)>.price>.down-arrow {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300266b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+
+.airplane {
+  flex-shrink: 0;
+  width: 28px;
+  height: 32px;
+  margin: 0.3rem auto 0 auto;
+  content: "";
+  /* Source: Skyscanner (skyscanner.com) */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' class='LegInfo_planeEnd__ZDkxM' %3e%3cpath fill='%23474747' d='M3.922 12h0.499c0.181 0 0.349-0.093 0.444-0.247L7.949 6.8l3.233-0.019C11.625 6.791 11.989 6.44 12 6 c-0.012-0.44-0.375-0.792-0.818-0.781L7.949 5.2L4.866 0.246C4.77 0.093 4.602 0 4.421 0L3.922 0c-0.367 0-0.62 0.367-0.489 0.71 L5.149 5.2l-2.853 0L1.632 3.87c-0.084-0.167-0.25-0.277-0.436-0.288L0 3.509L1.097 6L0 8.491l1.196-0.073 C1.382 8.407 1.548 8.297 1.632 8.13L2.296 6.8h2.853l-1.716 4.49C3.302 11.633 3.555 12 3.922 12'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+.timeline-track:after {
+  position: relative;
+  content: "";
+  width: .125rem;
+  background-color: #b2b2bf;
+}
+
+.timeline {
+  display: flex;
+  padding: .45rem 0px .32rem calc(var(--bs-gutter-x) * .5);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.timeline:after, .timeline:before {
+  content: "";
+  display: block;
+  z-index: 2;
+  width: .625rem;
+  height: .625rem;
+  border: .125rem solid #b2b2bf;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.timeline-track {
+  position: relative;
+  left: .25rem;
+  display: flex;
+  flex-grow: 1;
+}
+
+.timeline-duration {
+  line-height: 48px
+}
+
+.navbar {
+  background-color: #00266b;
+
+  background: linear-gradient(315deg, #134297 0%, #0F3C8E 20%, #0B3785 40%, #07317C 60%, #032B74 80%, #00266b 100%);
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+body.modal-open>.edit-search-bsp-toggle-edit-search-wrap {
+  padding-right: 17px;
+}
+
+.flight-details-city .next-day {
+  font-size: 10px;
+  font-weight: 400;
+  position: relative;
+  top: -8px;
+}
+
+.accordion-header .next-day {
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  top: -10px;
+}
+
+.accordion-body .next-day {
+  font-size: 8px;
+  font-weight: 400;
+  position: relative;
+  top: -6px;
+}
+
+.timeline-timing {
+  min-width: 60px;
+  padding-right: 0px
+}
+
+.max-width.container {
+  max-width: none;
+}
+
+.progress-bar__inner {
+  margin: 0;
+  padding: 0;
+}
+
+.progress-bar__bg-left {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.progress-bar#resultsProgressBar {
+  flex-direction: row;
+  background-color: white;
+  background: linear-gradient(to right,
+      white 0%,
+      white 50%,
+      #f2f2f2 50%,
+      #f2f2f2 100%);
+}
+
+.progress-bar__wrapper {
+  display: block;
+  background-color: #f2f2f2;
+  position: relative;
+  padding: 0;
+  z-index: 1;
+}
+
+.progress-bar-item_info.active {
+  background-color: #ffffff;
+}
+
+.progress-bar-item_info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+}
+
+.progress-bar-item_info .number {
+  border: none;
+  background-color: #FF9F00;
+  color: #FFFFFF;
+  position: inherit;
+  border: 0;
+  display: inline-block;
+  width: 1.4375em;
+  height: 1.4375em;
+  clear: both;
+  line-height: 1.4375em;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0.3125em;
+  z-index: 10;
+}
+
+.progress-bar-item_info .number em {
+  font-weight: 700;
+  font-family: "proxima-nova", "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  margin-top: 0;
+  display: block;
+  font-size: 0.75em;
+}
+
+.progress-bar-item_info .text {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "proxima-nova", "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 0.75em;
+  color: #00266B;
+  letter-spacing: 0.0625em;
+}
+
+.progress-bar-item_info.active .arrow {
+  background-image: none;
+  position: absolute;
+  right: -18px;
+  background-color: #ffffff;
+  height: 36px;
+  width: 36px;
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.flight-details-wrap {
+  background: #F6F9FF;
+  border-bottom: 0.0625rem solid #979797;
+  transition: max-height 0.3s ease;
+  max-height: 33.25rem;
+  overflow: auto;
+}
+
+.flight-details {
+  padding: 0.9375rem 0 1rem;
+}
+
+.flight-details-header {
+  font-size: 0.75rem;
+  color: #222;
+}
+
+.flight-details-date {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.flight-details-city {
+  display: block;
+  font-size: 1.2rem;
+  color: #00266b;
+  font-weight: 600;
+}
+
+.flight-details-city-after {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: -2px;
+}
+
+.edit-search__img-wrap {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: text-top;
+  margin: 0 -3px;
+}
+
+.edit-search-bsp-toggle-edit-search-wrap {
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.edit-search-bsp-toggle-1 {
+  text-align: center;
+  z-index: 3;
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  vertical-align: text-top;
+  margin: 0 -2px;
+}
+
+.edit-search__button {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #0254ec;
+  height: 30px;
+  background-color: #e5e9f0;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: 1;
+  outline: none;
+  border: 0;
+}
+
+.form-control.is-valid, .was-validated .form-control:valid, .form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label, .form-check-input.is-valid, .was-validated .form-check-input:valid, .form-check-input.is-valid:checked, .was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked, .was-validated .form-check-input:valid:checked {
+  border-color: rgb(206, 212, 218);
+  background-image: none;
+  color: rgb(33, 37, 41);
+}
+
+.form-control.is-valid, .was-validated .form-control:valid {
+  padding-right: 0.75rem;
+}
+
+.form-check-input:checked[type=checkbox] {
+  background-color: #0d6efd !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") !important;
+}
+
+.form-control-plaintext:focus-visible {
+  outline: none;
+}
+
+form.error {
+  position: relative;
+  animation: shake .1s linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+  0% {
+    left: -2px;
+  }
+
+  100% {
+    right: -2px;
+  }
+}
+
+.form-check-input.is-valid:focus, .was-validated .form-check-input:valid:focus {
+  box-shadow: none;
+}
+
+.bootstrap-select>.dropdown-toggle {
+  background-color: white;
+  border: 1px solid #ced4da;
+}
+
+.bs-actionsbox, .bs-donebutton, .bs-searchbox {
+  padding: 4px 8px 8px 8px;
+}
+
+.dropdown-menu {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bootstrap-select.is-invalid .dropdown-toggle, .has-error .bootstrap-select .dropdown-toggle, .was-validated .bootstrap-select select:invalid+.dropdown-toggle {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.bootstrap-select.is-invalid .dropdown-toggle:focus, .has-error .bootstrap-select .dropdown-toggle:focus, .was-validated .bootstrap-select select:invalid+.dropdown-toggle:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 .25rem rgba(220, 53, 69, .25);
+}
+
+.bootstrap-select.is-valid .dropdown-toggle, .was-validated .bootstrap-select select:valid+.dropdown-toggle {
+  border-color: rgb(206, 212, 218);
+}
+
+.bootstrap-select.is-valid .dropdown-toggle:focus, .was-validated .bootstrap-select select:valid+.dropdown-toggle:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 .25rem rgba(25, 135, 84, .25);
+}
+
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0 !important;
+  box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.airportCodeBadge {
+  display: inline-block;
+  width: 45px;
+}
+
+.dashboardTitle {
+  border-bottom: 1px solid #dee2e6;
+  height: 42px
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  font-weight: 500;
+}
+
+table.dataTable {
+  padding: 0.5rem 0;
+}
+
+table.dataTable.fixedHeader-floating, table.dataTable.fixedHeader-locked {
+  background-color: #FAFAFA
+}
+
+input[type=datetime-local] {
+  width: 200px;
+}
+
+td>.form-control, th>.form-control {
+  padding: .375rem .5rem;
+}
+
+.dtfh-floatingparentfoot {
+  height: 64px !important;
+}
+
+.dtfh-floatingparenthead {
+  height: 70px !important;
+}
