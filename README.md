@@ -1,6 +1,4 @@
-# Github Information
-
-The `main` branch contains the actual assignment itself. There is also a `demo` branch that is meant for the demo website, for you to get a feel of how the website works. In this branch, the database is not a SQL database, it's a simple JSON file.
+# Information
 
 There may be unintended bugs, you're welcome to open a PR and fix it, or if you're too lazy to open a PR, just ignore it.
 
